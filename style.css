@@ -1,0 +1,68 @@
+html {
+	background-color: #18281a;
+	color: #e8f8ea;
+	margin-left: 5%;
+	font-size: 16pt;
+	font-family: "TeXGyreSchola", serif;
+}
+
+.avertissement {
+	background-color: #050605;
+	color: #e8f8ea;
+	font-size: 28pt;
+	max-width: 385px;
+	margin: auto;
+}
+
+canvas {
+	display: block;
+	margin: auto;
+}
+
+
+#nom {
+	color : #ffffff;
+	margin-bottom : 0px;
+	text-shadow : 6px 1px purple;
+}
+
+.bouton {
+	text-decoration: none;
+}
+
+.page-langue {
+	background-color: #a8e540;
+	border: 5px outset #dbb995;
+	border-radius: 20px;
+	padding: 0.05em 0.05em 0.05em 0.5em;
+	margin: 0.0em 0.0em 1.0em 5.0em;
+	max-width: 7.0em;
+}
+
+.b1 {
+  font-family: "Shippori Mincho B1", sans-serif;
+}
+
+.phonetique {
+  font-family: "Charis SIL", serif;
+}
+
+@font-face {
+    font-family: "Shippori Mincho B1";
+    src: url("ShipporiMinchoB1-Regular.ttf");
+}
+
+@font-face {
+    font-family: "UnifrakturMaguntia";
+    src: url("UnifrakturMaguntia-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Charis SIL";
+    src: url("CharisSIL-Regular.ttf");
+}
+
+@font-face {
+    font-family: "TeXGyreSchola";
+    src: url("texgyreschola-regular.otf");
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scapholène — Author's Site</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<a class="bouton" href="index.html"><h2 class="page-langue">🏠 Accueil</h2></a>
+	<h1 id="nom">📘 Scapholène</h1>
+
+	<h1>🚧 EN CONSTUCTION 🏗️</h1>
+  
+	<p class="phonetique avertissement">
+		<canvas></canvas>
+	</p>
+<script>
+let canvas = document.querySelector('canvas');
+let context = canvas.getContext('2d');
+
+let resize = () => {
+  canvas.width = 370;
+  canvas.height = 40;
+}
+
+window.addEventListener('resize', resize);
+
+window.addEventListener('load', () => {
+
+  resize();
+  let pos, vel;
+  pos = { x: 10, y: 10 };
+  vel = { x: 1,  y: 1  };
+
+  let loop = () => {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    pos.x += vel.x * 0.5 % canvas.width;
+    pos.y += vel.y * 0.2 % canvas.height;
+
+    if (pos.x < 5 || pos.x > canvas.width - 5)
+      vel.x *= -1;
+
+    if (pos.y < 5 || pos.y > canvas.height - 5)
+      vel.y *= -1;
+
+	context.strokeStyle = "#bb0b0b";
+    context.strokeRect(pos.x - 5, pos.y - 5, 5, 4);
+
+	context.fillStyle = "white";
+	context.font = "14pt Charis SIL bold";
+    context.fillText("AVERTISSEMENT [" + i + "] : CETTE POÉSIE CONTIENT DES ERREURS LOGIQUES. ämäjäkä o̞ɡämähä o̞hänäɕiänäho̞hä ämäɡo̞ äkäjämä [" + i * 7 % 19 + "]", chiffre(), canvas.height / 2);
+  };
+
+  setInterval(loop, 1000 / 60);
+});
+
+let plus = 700;
+let i = canvas.width + plus;
+let chiffre = () => {
+  i--;
+  if (i == -canvas.width - plus) i = canvas.width;
+  return i;
+}
+</script>
+</body>
+</html>

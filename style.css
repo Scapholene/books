@@ -1,17 +1,9 @@
 html {
-	background-color: #18281a;
-	color: #e8f8ea;
+	background-color: #f2efde;
+	color: #122f1e;
 	margin-left: 5%;
 	font-size: 16pt;
 	font-family: "TeXGyreSchola", serif;
-}
-
-.avertissement {
-	background-color: #050605;
-	color: #e8f8ea;
-	font-size: 28pt;
-	max-width: 385px;
-	margin: auto;
 }
 
 canvas {
@@ -19,15 +11,64 @@ canvas {
 	margin: auto;
 }
 
-
-#nom {
-	color : #ffffff;
-	margin-bottom : 0px;
-	text-shadow : 6px 1px purple;
+#avertissement {
+	border-radius: 8px;
 }
 
-.bouton {
+#nom {
+	display: flex;
+	font-family: "UnifrakturMaguntia", serif;
+	color : #000000;
+	margin-bottom : 0px;
+	text-shadow : 5px 5px purple;
+}
+
+.avertissement {
+	background-color: #050605;
+	color: #f7f7f9;
+	font-size: 28pt;
+	max-width: 385px;
+	margin: auto;
+}
+
+.b1 {
+  font-family: "Shippori Mincho B1", sans-serif;
+}
+
+.bouton,
+.lien {
 	text-decoration: none;
+}
+
+.code-qr {
+	max-width: 5.0cm;
+}
+
+.description-livre {
+	border-left: 4px solid #999;
+	max-width: 20cm;
+	padding-left: 1em;
+}
+
+.fruit-nom {
+	max-width: 2cm;
+}
+
+.mini {
+	border-radius: 8px;
+	max-width: 13.0em;
+}
+
+.tableau-livre {
+	margin: auto;
+	max-width: 67%;
+}
+
+
+a.table-matieres {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 13px;
 }
 
 .page-langue {
@@ -37,10 +78,6 @@ canvas {
 	padding: 0.05em 0.05em 0.05em 0.5em;
 	margin: 0.0em 0.0em 1.0em 5.0em;
 	max-width: 7.0em;
-}
-
-.b1 {
-  font-family: "Shippori Mincho B1", sans-serif;
 }
 
 .phonetique {
@@ -65,4 +102,41 @@ canvas {
 @font-face {
     font-family: "TeXGyreSchola";
     src: url("texgyreschola-regular.otf");
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14pt;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .mini {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .code-qr {
+    max-width: 30%;
+    height: auto;
+  }
+
+  .tableau-livre {
+    width: 100%;
+    margin: auto;
+  }
+
+  .description-livre {
+    border-left: none;
+    border-top: 3px solid #999;
+    padding-top: 1em;
+  }
+
+  .page-langue {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
 }

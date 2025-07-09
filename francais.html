@@ -2,65 +2,206 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scapholène — Author's Site</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="./scapholene1.png" />
+	<meta name="keywords" content="scapholene, palindrome, phonétique, poésie, effets sonores, SQL, MySQL, bash, linguistique, vers libres, programmation, script, création de texte,  alphabet phonétique international, API, créativité, expression artistique, cyberpunk, phonetics, poetry, sound effects, linguistics, free verse, programming, scripting, text creation, International Phonetic Alphabet, IPA, creativity, artistic expression, 回文、音声学、詩、効果音、言語学、自由詩、プログラミング、スクリプト、テキスト作成、国際音声記号、創造性、芸術的表現、サイバーパンク">
 </head>
 <body>
 	<a class="bouton" href="index.html"><h2 class="page-langue">🏠 Accueil</h2></a>
-	<h1 id="nom">📘 Scapholène</h1>
+	<h1 id="nom"><img src="./scapholene1.png" class="fruit-nom">Scapholène</h1>
 
-	<h1>🚧 EN CONSTUCTION 🏗️</h1>
-  
-	<p class="phonetique avertissement">
-		<canvas></canvas>
+	<p id="avertissement" class="phonetique avertissement">
+		<canvas aria-label="Animation visuel : AVERTISSEMENT — Cette poésie contient des erreurs logiques"></canvas>
 	</p>
-<script>
-let canvas = document.querySelector('canvas');
-let context = canvas.getContext('2d');
+	<noscript>
+	  <p class="avertissement-texte">⚠ Cette poésie contient des erreurs logiques. Activez JavaScript pour voir l’animation.</p>
+	</noscript>
 
-let resize = () => {
-  canvas.width = 370;
-  canvas.height = 40;
-}
+	<table class="tableau-livre">
+		<tbody>
+		<tr><td><h2>Quitté optimal ou la mite poetique — <em>Les palindromes phonétiques</em></h2></td></tr>
+		<tr>
+			<td>
+				<a href="./images/couverture_tome1_fr.png" target="_blank" rel="noopener noreferrer"><img src="./images/couverture_tome1_fr_mini.jpg" class="mini" alt="couverture"/></a>
+				<a class="lien table-matieres" href="./PDF/tome1_table_des_matieres_fr.pdf" target="_blank" rel="noopener noreferrer">🔗 Tables des matières</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="description-livre">Ce livre est le résultat d'expérimentations artistiques mélangeant : la logique, la phonétique, la programmation SQL (Structured Query Language) et la poésie en vers libre. À l’intersection entre le langage, la technologie et l’art, il explore une approche presque cyberpunk, où l’utilisation de bases de données et transforme la création littéraire. La méthode de recherche lexicale et phonétique, par l'usage de bases de données, s’assouplit pour s'infuser sous forme de miroirs de sons au travers de la poésie. La construction de la palindrome phonétique étant un exercice d'une certaine difficulté, les possibilités créatives de l'artiste se voient augmentées par l'utilisation de la technologie. Sans être parfait, le résultat présente une harmonie sonore présentant une musicalité propre à l'exercice.</div><br/>
+				<strong>Le contenu de l'ouvrage inclus :</strong>
+				<ul>
+					<li>Une présentation des aspects théoriques pour l'exercice ;</li>
+					<li>La méthode de construction de palindromes phonétiques ;</li>
+					<li>Des idées succinctes pour la rédaction ;</li>
+					<li>La validation des palindromes phonétiques ;</li>
+					<li>Des exemples de requêtes pour la construction de tables et de recherches lexicales et phonétiques en SQL ;</li>
+					<li>Des exemples de poèmes écrits en palindromes phonétiques ;</li>
+					<li>D'autres palindromes phonétiques en vrac ;</li>
+					<li>Un annexe sur la généralité de l'alphabet phonétique international ;</li>
+					<li>Un annexe sur les mots phonétiquement symétriques.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="./images/t1_fr_qrcode.png" target="_blank" rel="noopener noreferrer"><img src="./images/t1_fr_qrcode.png" class="code-qr" alt="code QR"/></a>
+				<div class="table-matieres">En vente : <a class="lien" href="https://www.thebookedition.com/fr/quitte-optimal-ou-la-mite-poetique-p-419021.html" target="_blank" rel="noopener noreferrer">https://www.thebookedition.com/fr/quitte-optimal-ou-la-mite-poetique-p-419021.html</a></div>
+			</td>
+		</tr>
+		
+		<tr><td>&nbsp;</td></tr>
+		<tr><td><h3>📘🇬🇧 Équivalent en anglais</h3></td></tr>
+		<tr>
+			<td>
+				<h2>Opus 10's Aurores net Syr Poe — <em>Phonetic palindromes</em><br/>
+					« Opus №10: Aurores nettes sur Syr Poe — <em>Les palindromes phonétiques</em> »
+				</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="./images/couverture_tome1_en.png" target="_blank" rel="noopener noreferrer"><img src="./images/couverture_tome1_en_mini.jpg" class="mini" alt="couverture"/></a>
+				<a class="lien table-matieres" href="./PDF/tome1_table_des_matieres_en.pdf" target="_blank" rel="noopener noreferrer">🔗 Tables des matières</a>
+			</td>
+		</tr>
 
-window.addEventListener('resize', resize);
+		<tr><td><h3>📘🇯🇵 Équivalent en japonais</h3></td></tr>
+		<tr>
+			<td>
+				<h2>
+					<span class="b1">臆見を根っこ — <em>音声回文</em></span><br/>
+					« Les racines de la timidité — <em>Les palindromes phonétiques</em> »
+				</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="./images/couverture_tome1_jp.png" target="_blank" rel="noopener noreferrer"><img src="./images/couverture_tome1_jp_mini.jpg" class="mini" alt="couverture"/></a>
+				<a class="lien table-matieres" href="./PDF/tome1_table_des_matieres_jp.pdf" target="_blank" rel="noopener noreferrer">🔗 Tables des matières</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="description-livre">Contient les sections « Journal d'un glitch » et les « Archétypes médullaires », absent des versions française et anglaise et inclus dans « Jour vert en reve rouge — <em>Recueil de poèmes</em> ».</div><br/>
+			</td>
+		</tr>
+		<tr><td><hr style="margin-top: 42px; margin-bottom: 42px;" /></td></tr>
+		<tr><td><h2>Jour vert en reve rouge — <em>Recueil de poèmes</em></h2></td></tr>
+		<tr>
+			<td>
+				<a href="./images/couverture_tome2_fr.png" target="_blank" rel="noopener noreferrer"><img src="./images/couverture_tome2_fr_mini.jpg" class="mini" alt="couverture"/></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="description-livre">Écrits à l’origine en japonais, selon la méthode expliquée dans « Quitté optimal ou la mite poétique — Les palindromes phonétiques », les poèmes sont constitués de vers miroirs ou sont des poèmes miroirs. Contient aussi la traduction des poèmes rédigés en anglais dans « Opus 10s Aurores net Syr Poe — <em>Phonetic palindromes</em> ». Naturellement, le palindrome phonologique ne peut  être préservé par la traduction. Au contraire, elle tend même à affiner ce type de poème.</div><br/>
+				<div class="description-livre">Contient les sections « Journal d'un glitch » et les « Archétypes médullaires », absent de la version japonais et inclus dans « <span class="b1">臆見を根っこ — <em>音声回文</em></span> ».</div><br/>
+				<strong>Structure du livre :</strong>
+				<ul>
+					<li>Poèmes originaux en japonais ;</li>
+					<li>Journal d'un glitch ;</li>
+					<li>Les Archétypes médullaires</li>
+					<li>Poèmes originaux en anglais</li>
+					<li>mot de la « FIN ».</li>
+				</ul>
+			</td>
+		</tr>
+		<!--tr>
+			<td>
+				<a href="./images/t1_fr_qrcode.png" target="_blank" rel="noopener noreferrer"><img src="./images/t1_fr_qrcode.png" class="code-qr" alt="code QR"/></a>
+				<div class="table-matieres">En vente : <a class="lien" href="https://www.thebookedition.com/fr/quitte-optimal-ou-la-mite-poetique-p-419021.html" target="_blank" rel="noopener noreferrer">https://www.thebookedition.com/fr/quitte-optimal-ou-la-mite-poetique-p-419021.html</a></div>
+			</td>
+		</tr-->
+		
+		<tr><td>&nbsp;</td></tr>
+		<tr><td><h3>📘🇬🇧 Équivalent en anglais</h3></td></tr>
+		<tr>
+			<td>
+				<h2>Reveal leave ear — <em>Collection of Poems</em><br/>
+				« Révéler quitte l'oreille — <em>Recueil de poèmes</em> »
+				</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="./images/couverture_tome2_en.png" target="_blank" rel="noopener noreferrer"><img src="./images/couverture_tome2_en_mini.jpg" class="mini" alt="couverture"/></a>
+			</td>
+		</tr>
 
-window.addEventListener('load', () => {
+		<tr><td><h3>📘🇯🇵 Équivalent en japonais</h3></td></tr>
+		<tr>
+			<td>
+				<h2>
+					<span class="b1">粋美響き — <em>音声回文による詩集</em></span><br/>
+					« L’essence gracieuse résonne — <em>Recueil de poèmes en palindromes phonétiques</em> »
+				</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="./images/couverture_tome2_jp.png" target="_blank" rel="noopener noreferrer"><img src="./images/couverture_tome2_jp_mini.jpg" class="mini" alt="couverture"/></a>
+			</td>
+		</tr>
+		</tbody>
+	</table> 
+	<script>
+	let canvas = document.querySelector('canvas');
+	let context = canvas.getContext('2d');
+	let message = "AVERTISSEMENT 🦀 CETTE POÉSIE CONTIENT DES ERREURS LOGIQUES — ämäjäkä o̞ɡämähä o̞hänäɕiänäho̞hä ämäɡo̞ äkäjämä 🐌";
+	let x = 0;
 
-  resize();
-  let pos, vel;
-  pos = { x: 10, y: 10 };
-  vel = { x: 1,  y: 1  };
+	const resize = () => {
+	  canvas.width = 370;
+	  canvas.height = 40;
+	};
 
-  let loop = () => {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    pos.x += vel.x * 0.5 % canvas.width;
-    pos.y += vel.y * 0.2 % canvas.height;
+	window.addEventListener('resize', resize);
+	window.addEventListener('load', () => {
+	  resize();
+	  context.font = "14pt Charis SIL bold";
 
-    if (pos.x < 5 || pos.x > canvas.width - 5)
-      vel.x *= -1;
+	  x = canvas.width;
 
-    if (pos.y < 5 || pos.y > canvas.height - 5)
-      vel.y *= -1;
+	  const loop = () => {
+		context.clearRect(0, 0, canvas.width, canvas.height);
 
-	context.strokeStyle = "#bb0b0b";
-    context.strokeRect(pos.x - 5, pos.y - 5, 5, 4);
+		i = chiffre();
+		message = "AVERTISSEMENT [" + i + "] : 🦀 CETTE POÉSIE CONTIENT DES ERREURS LOGIQUES — ämäjäkä o̞ɡämähä o̞hänäɕiänäho̞hä ämäɡo̞ äkäjämä 🐌 [" + i * 7 % 19 + "]";
+		let textWidth = context.measureText(message).width;
 
-	context.fillStyle = "white";
-	context.font = "14pt Charis SIL bold";
-    context.fillText("AVERTISSEMENT [" + i + "] : CETTE POÉSIE CONTIENT DES ERREURS LOGIQUES. ämäjäkä o̞ɡämähä o̞hänäɕiänäho̞hä ämäɡo̞ äkäjämä [" + i * 7 % 19 + "]", chiffre(), canvas.height / 2);
-  };
+		x -= 1; // vitesse du scroll
+		if (x < -textWidth) {
+		  x = canvas.width; // recommence à droite
+		}
 
-  setInterval(loop, 1000 / 60);
-});
+		context.font = "14pt Charis SIL bold";
+		context.globalAlpha = 0.9 + Math.sin(i / 10) * 0.3;
+		context.fillStyle = "#bb0b0b";
+		context.fillText(message, x, canvas.height / 2);
+	  };
 
-let plus = 700;
-let i = canvas.width + plus;
-let chiffre = () => {
-  i--;
-  if (i == -canvas.width - plus) i = canvas.width;
-  return i;
-}
-</script>
+		function animate() {
+			loop();            // exécute ton animation
+			requestAnimationFrame(animate); // boucle automatiquement
+		}
+		
+		animate(); 
+	});
+
+	let plus = 200;
+	let i = canvas.width + plus;
+	let chiffre = () => {
+	  i--;
+	  if (i == -canvas.width - plus) i = canvas.width;
+	  return i;
+	}
+
+	</script>
 </body>
 </html>
+
+
+<!--h3>📘🇫🇷 Équivalent en français</h3-->

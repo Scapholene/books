@@ -25,3 +25,5 @@ Merci de ne pas reproduire, copier ou redistribuer sans l’autorisation explici
 ### 🇯🇵 日本語  
 このリポジトリに含まれるすべての内容（文章、画像、構造、創作物）は著作権により保護されています。  
 著者の許可なく複製、転載、再配布することはお控えください。
+
+https://scapholene.github.io/books/

@@ -85,9 +85,11 @@ a.table-matieres {
 }
 
 @font-face {
-    font-family: "Shippori Mincho B1";
-    src: url("ShipporiMinchoB1-Regular.ttf");
+  font-family: "Shippori Mincho B1";
+  src: url("ShipporiMinchoB1-Regular.ttf") format("woff2");
+  font-display: swap;
 }
+
 
 @font-face {
     font-family: "UnifrakturMaguntia";

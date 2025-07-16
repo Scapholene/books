@@ -14,7 +14,6 @@ Ce dépôt présente des œuvres littéraires, fragments de recherche, explorati
 
 ---
 
-
 ## ⚠️ Copyright Notice / Droits d’auteur / 著作権について
 
 ### 🇬🇧 English  

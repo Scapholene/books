@@ -1,0 +1,168 @@
+html {
+	background-color: #f2efde;
+	color: #122f1e;
+	margin-left: 5%;
+	font-size: 16pt;
+	font-family: "TeXGyreSchola", serif;
+}
+
+canvas {
+	display: block;
+	margin: auto;
+}
+
+#avertissement {
+	border-radius: 8px;
+}
+
+#nom {
+	display: flex;
+	font-family: "UnifrakturMaguntia", serif;
+	color : #000000;
+	margin-bottom : 0px;
+	text-shadow : 5px 5px purple;
+}
+
+.avertissement {
+	background-color: #050605;
+	color: #f7f7f9;
+	font-size: 28pt;
+	max-width: 385px;
+	margin: auto;
+}
+
+.b1 {
+  font-family: "Shippori Mincho B1", sans-serif;
+}
+
+.bouton,
+.lien {
+	text-decoration: none;
+}
+
+.code-qr {
+	max-width: 5.0cm;
+}
+
+.description-livre {
+	border-left: 4px solid #999;
+	max-width: 20cm;
+	padding-left: 1em;
+}
+
+.fruit-nom {
+	max-width: 2cm;
+}
+
+.mini {
+	border-radius: 8px;
+	max-width: 13.0em;
+}
+
+.tableau-livre {
+	margin: auto;
+	max-width: 67%;
+}
+
+
+a.table-matieres {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 13px;
+}
+
+.page-langue {
+	background-color: #a8e540;
+	border: 5px outset #dbb995;
+	border-radius: 20px;
+	padding: 0.05em 0.05em 0.05em 0.5em;
+	margin: 0.0em 0.0em 1.0em 5.0em;
+	max-width: 7.0em;
+}
+
+.phonetique {
+  font-family: "Charis SIL", serif;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1.5); }
+  50% { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.5); }
+}
+
+.fleche-container {
+	margin: auto;
+	text-align: center;
+	filter: drop-shadow(0 0 21px #BB0B0B);
+}
+
+.fleche-rituelle {
+	animation: pulse 2s infinite;
+	color: #BB0B0B;
+	filter: drop-shadow(0 0 12px #000000);
+	font-size: 4.0em;
+}
+
+.fleche-container img {
+	display: inline-block;
+}
+
+@font-face {
+  font-family: "Shippori Mincho B1";
+  src: url("ShipporiMinchoB1-Regular.ttf") format("woff2");
+  font-display: swap;
+}
+
+
+@font-face {
+    font-family: "UnifrakturMaguntia";
+    src: url("UnifrakturMaguntia-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Charis SIL";
+    src: url("CharisSIL-Regular.ttf");
+}
+
+@font-face {
+    font-family: "TeXGyreSchola";
+    src: url("texgyreschola-regular.otf");
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14pt;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .mini {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .code-qr {
+    max-width: 30%;
+    height: auto;
+  }
+
+  .tableau-livre {
+    width: 100%;
+    margin: auto;
+  }
+
+  .description-livre {
+    border-left: none;
+    border-top: 3px solid #999;
+    padding-top: 1em;
+  }
+
+  .page-langue {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+

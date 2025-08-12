@@ -11,6 +11,10 @@ canvas {
 	margin: auto;
 }
 
+h3 {
+	margin-top: 6em;
+}
+
 #avertissement {
 	border-radius: 8px;
 }

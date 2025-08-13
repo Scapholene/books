@@ -170,3 +170,31 @@ a.table-matieres {
   }
 }
 
+.bouton-vente {
+    background-color: #d1b51b;
+    border: 3px ridge #bb0b0b;
+    border-radius: 0.8em;
+    color: #000000;
+    display: inline-block;
+    font-size: 1.2em;
+    margin-left: 1.0em;
+    margin-right: 1.0em;
+    margin-top: 1.0em;
+    padding-left: 1.0em;
+    padding-right: 1.0em;
+    text-decoration: none;
+}
+
+.bouton-vente:hover {
+   background-color: #a8e540;
+   border-radius: 0.4em;
+   font-size: 1.25em;
+}
+
+.conteneur-vente {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 1.0em;
+}

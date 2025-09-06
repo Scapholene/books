@@ -15,6 +15,10 @@ h3 {
 	margin-top: 6em;
 }
 
+.vide {
+	height: 400px;
+}
+
 #avertissement {
 	border-radius: 8px;
 }
@@ -25,6 +29,10 @@ h3 {
 	color : #000000;
 	margin-bottom : 0px;
 	text-shadow : 5px 5px purple;
+}
+
+.goth {
+	font-family: "UnifrakturMaguntia", serif;
 }
 
 .avertissement {
@@ -197,4 +205,13 @@ a.table-matieres {
     flex-wrap: wrap; 
     justify-content: center;
     margin-top: 1.0em;
+}
+
+.img-horlogoeuf {
+	border-radius: 8px;
+}
+
+.titre-horlogoeuf {
+    font-size: 1.5em;
+	margin-bottom: 10px;
 }

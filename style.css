@@ -215,3 +215,7 @@ a.table-matieres {
     font-size: 1.5em;
 	margin-bottom: 10px;
 }
+
+.italic {
+  font-style: italic;
+}

@@ -219,3 +219,11 @@ a.table-matieres {
 .italic {
   font-style: italic;
 }
+
+.liste-musique li {
+  list-style-type: none;
+}
+
+.liste-musique li a {
+  color: #bb0b0b;
+}

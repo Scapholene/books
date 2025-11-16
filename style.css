@@ -227,3 +227,7 @@ a.table-matieres {
 .liste-musique li a {
   color: #bb0b0b;
 }
+
+.liste-sans-point {
+  list-style-type: none;
+}

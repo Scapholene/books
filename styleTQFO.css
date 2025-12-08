@@ -50,7 +50,6 @@ html {
   background-color: #400672;
 }
 
-
 .principal,
 .projet,
 .narrateur,
@@ -62,6 +61,10 @@ button {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 20px;
+}
+
+.principal {
+	margin-top: 160px;
 }
 
 .principal h1,
@@ -146,13 +149,13 @@ button {
 
 .bouton-table-des-matieres {
 	position: fixed;
-	top: 10px;
+	top: 100px;
 	left: 10px;
 }
 
 .bouton-config {
 	position: fixed;
-	top: 10px;
+	top: 100px;
 	left: 3em;
 }
 
@@ -305,4 +308,21 @@ button {
 	flex: 1;
 }
 
+.droite {
+	text-align: right;
+	font-style: italic;
+	float: right;
+}
 
+.temps {
+	border: 0px;
+	background-color: #10085b;
+	border-radius: 64em;
+	color: #dcd9f9;
+	padding: 10px;
+}
+
+.temps:hover {
+	background-color: #dcd9f9;
+	color: #10085b;
+}

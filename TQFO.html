@@ -61,6 +61,12 @@
     const s = Math.floor(sec % 60);
     return m + ":" + (s < 10 ? "0" + s : s);
   }
+  
+  function allerA(seconds) {
+    if (player && player.seekTo) {
+      player.seekTo(seconds, true);
+    }
+  }
 </script>
 
 <span class="conteneur-bouton">
@@ -89,6 +95,10 @@
 </ul>
 </div>
 <div class="principal">
+<div><button class="droite temps" onclick="allerA(13)">♪♫ 00:13</button></div>
+<div><button class="droite temps" onclick="allerA(24)">♪♫ 00:24</button></div>
+<div><button class="droite temps" onclick="allerA(32)">♪♫ 00:32</button></div>
+
 <img src="TQFO.jpg" alt="TQFO" class="image-TQFO" />
 <div class="scribe">Le scribe pose la plume. Il ouvre son grand cahier, dont les pages sentent encore la poussière des archives et l’encre des veilles nuits. Il écrit pour retenir le passé, pour que ce qui fut ne se perde pas dans l’oubli. Ici seront consignés les contes et les légendes que la rébellion transmet à voix basse.
 </br></br>À chaque titre, il note l’origine du fragment, la main qui l’a confié, et la leçon que la mémoire doit garder. Il écrit non pour juger, mais pour témoigner : les bougies, les horloges, les hybrides, les machines et les regards y trouveront leur place. Puis il trace, en haut de la page, le premier titre et laisse la plume glisser, comme on allume une veilleuse pour éclairer le chemin des lecteurs à venir.
@@ -96,6 +106,7 @@
 <img class="image-histoire" src="./arriere_01.jpg" alt="image 1" />
 <h2 id="histoire-1">L'Arbre de la Vie et l'Échec réussit.
 </h2>
+<div><button class="droite temps" onclick="allerA(51)">♪♫ 00:51</button></div>
 <div>Dans un futur lointain, dans un décor d’autrefois aux forêts millénaires et enchanteresses. La terre a oublié la destruction toxique de l’humain sur son environnement. Une nouvelle espèce d’humain est née, encore une fois à l’image de Dieu, vêtue d’un grisâtre‑violet, aux grands yeux.
 </div>
 </div>

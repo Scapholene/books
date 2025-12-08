@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Le Théâtre des Quatre Feuilles d’Ombre</title>
+	<link rel="stylesheet" type="text/css" href="styleTQFO.css">
+	<link rel="icon" href="./scapholene1.png" />
+	<meta name="keywords" content="audiobook, livre audio, récits">
+</head>
+<body id="debut">
+<!--iframe class="radio-TQFO" src="/media/DATA/humain/Documents/Livres/Poèmes/Histoire/Quatre Feuilles d'Ombre/dossier/audio/TQFO.mp4"></iframe-->
+<script src="https://www.youtube.com/iframe_api"></script>
+<div id="radio-TQFO"></div>
+<script>
+  let player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('radio-TQFO', {
+      height: '50',   // vidéo invisible
+      width: '100%',
+      videoId: 'WtclsyCPcp8', // <-- ID de la vidéo
+      playerVars: { 'controls': 0 }
+    });
+  }
+</script>
+<span class="conteneur-bouton">
+<button class="bouton-config" title="Configurer l’interface">⚙️</button>
+<button class="bouton-table-des-matieres" title="Table des matières">📖</button>
+</span>
+<div class="menu-config">
+<span id="fermer-config">❌</span>
+<div><button id="commande-clair">Thème Clair</button><br/>
+<button id="commande-fonce">Thème Sombre</button></div>
+<span><button id="police-moins">➖</button> Police <input type="text" id="choix-police" value="TeXGyreSchola"> <button id="police-plus">➕</button></span>
+<br/><button id="police-scapholene">Écriture manuscrite</button>
+</div>
+<div class="table-des-matiere">
+<span id="fermer-table">❌</span>
+<ul>
+<li><a class="lien" href="#debut">Début.</a></li>
+<li><a class="lien" href="#histoire-1">L'Arbre de la Vie et l'Échec réussit.</a></li>
+<li><a class="lien" href="#histoire-2">Miroir déformant – la société d’autrefois.</a></li>
+<li><a class="lien" href="#histoire-3">L’Ombre du Chasseur.</a></li>
+<li><a class="lien" href="#histoire-4">Chroniques du Chrono‑Décodeur.</a></li>
+<li><a class="lien" href="#histoire-5">Verdant et Frambois — Chronique des hybrides.</a></li>
+<li><a class="lien" href="#histoire-6">d’Yeux, le regard perdu.</a></li>
+<li><a class="lien" href="#fin">Fin</a></li>
+<li><a class="lien" href="./francais.html">Retour aux Livres</a></li>
+</ul>
+</div>
+<div class="principal">
+<img src="TQFO.jpg" alt="TQFO" class="image-TQFO" />
+<div class="scribe">Le scribe pose la plume. Il ouvre son grand cahier, dont les pages sentent encore la poussière des archives et l’encre des veilles nuits. Il écrit pour retenir le passé, pour que ce qui fut ne se perde pas dans l’oubli. Ici seront consignés les contes et les légendes que la rébellion transmet à voix basse.
+</br></br>À chaque titre, il note l’origine du fragment, la main qui l’a confié, et la leçon que la mémoire doit garder. Il écrit non pour juger, mais pour témoigner : les bougies, les horloges, les hybrides, les machines et les regards y trouveront leur place. Puis il trace, en haut de la page, le premier titre et laisse la plume glisser, comme on allume une veilleuse pour éclairer le chemin des lecteurs à venir.
+</div>
+<img class="image-histoire" src="./arriere_01.jpg" alt="image 1" />
+<h2 id="histoire-1">L'Arbre de la Vie et l'Échec réussit.
+</h2>
+<div>Dans un futur lointain, dans un décor d’autrefois aux forêts millénaires et enchanteresses. La terre a oublié la destruction toxique de l’humain sur son environnement. Une nouvelle espèce d’humain est née, encore une fois à l’image de Dieu, vêtue d’un grisâtre‑violet, aux grands yeux.
+</div>
+</div>
+</body>
+<script src="./scriptTQFO.js"></script>
+</html>

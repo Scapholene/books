@@ -11,28 +11,58 @@
 <!--iframe class="radio-TQFO" src="/media/DATA/humain/Documents/Livres/Poèmes/Histoire/Quatre Feuilles d'Ombre/dossier/audio/TQFO.mp4"></iframe-->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<!-- Conteneur du lecteur YouTube (caché) -->
 <div id="radio-TQFO"></div>
 
-<!-- Interface radio personnalisée -->
 <div class="radio-controls">
   <button onclick="player.playVideo()">▶️ Lecture</button>
   <button onclick="player.pauseVideo()">⏸️ Pause</button>
-  <button onclick="player.seekTo(player.getCurrentTime() - 10, true)">⏪ -10s</button>
-  <button onclick="player.seekTo(player.getCurrentTime() + 10, true)">⏩ +10s</button>
+  <span id="time">0:00 / 0:00</span>
+  <input type="range" id="progress" min="0" max="100" value="0" step="0.1">
 </div>
 
 <script>
   let player;
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('radio-TQFO', {
-      height: '0',   // vidéo invisible
+      height: '0',
       width: '0',
-      videoId: 'WtclsyCPcp8', // <-- ID de ta vidéo
-      playerVars: { 'controls': 0 } // pas d'UI YouTube
+      videoId: 'WtclsyCPcp8',
+      playerVars: { 'controls': 0 },
+      events: {
+        'onReady': onPlayerReady
+      }
     });
   }
+
+  function onPlayerReady() {
+    const progress = document.getElementById('progress');
+    const timeDisplay = document.getElementById('time');
+
+    // Met à jour la barre toutes les 500ms
+    setInterval(() => {
+      const duration = player.getDuration();
+      const current = player.getCurrentTime();
+      if (duration > 0) {
+        progress.value = (current / duration) * 100;
+        timeDisplay.textContent = formatTime(current) + " / " + formatTime(duration);
+      }
+    }, 500);
+
+    // Quand l’utilisateur déplace le slider
+    progress.addEventListener('input', (e) => {
+      const duration = player.getDuration();
+      const seekTime = (e.target.value / 100) * duration;
+      player.seekTo(seekTime, true);
+    });
+  }
+
+  function formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return m + ":" + (s < 10 ? "0" + s : s);
+  }
 </script>
+
 <span class="conteneur-bouton">
 <button class="bouton-config" title="Configurer l’interface">⚙️</button>
 <button class="bouton-table-des-matieres" title="Table des matières">📖</button>

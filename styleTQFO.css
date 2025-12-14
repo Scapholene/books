@@ -13,47 +13,38 @@
     src: url("Scapholene.ttf");
 }
 
-@media screen and (max-width: 800px) {
-	.principal,
-	.projet,
-	.narrateur,
-	.legal,
-	button {
-		background-color: #f9f8f2;
-		font-family: "TeXGyreSchola", serif;
-		line-height: 1.6;
-		margin: 0 auto;
-		padding: 20px;
-	}	
-}
-
 html {
 	font-family: "TeXGyreSchola", serif;
 }
 
-/*.radio-TQFO {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 3000;
-  background-color: #400672;
-}*/
+.radio-controls {
+	align-items: center;
+	background: #400672;
+	color: white;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	left: 0;
+	top: 0;
+	padding: 10px;
+	position: fixed;
+	width: 99%;
+	z-index: 3000;
+}
 
-#radio-TQFO iframe {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 3000;
-  background-color: #400672;
+.radio-controls input[type="range"] {
+	flex: 1;
+}
+
+.principal {
+	border-radius: 0.5em;
 }
 
 .principal,
 .projet,
 .narrateur,
 .legal,
+.chanson,
 button {
 	background-color: #f9f8f2;
 	font-family: "TeXGyreSchola", serif;
@@ -63,21 +54,10 @@ button {
 	padding: 20px;
 }
 
-.principal {
-	margin-top: 160px;
-}
-
 .principal h1,
 .principal h2,
 .principal h3 {
 	font-size: 3vw;
-}
-
-.principal div,
-.projet,
-.narrateur,
-.menu-config span {
-	font-size: 1.5vw;
 }
 
 .legal {
@@ -87,12 +67,13 @@ button {
 
 .projet,
 .narrateur,
-.legal {
+.legal,
+.chanson {
 	margin-top: 3em;
 }
 
 .scribe {
-	border-left : 7px solid #000000;
+	border-left : 10px solid #000000;
 	font-family: "Inconsolata", monospace;
 	font-size: 18pt;
 	margin-top: 5em;
@@ -100,19 +81,17 @@ button {
 }
 
 body {
-	background-image: url('./arriere_01.jpg');
+	background-image: url('./images/TQFO/arriere_01.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	margin: 0;
-	padding: 0;
+	padding: 6rem 0 0 0;
 }
 
-
 div {
-	font-size: 1rem;
-	margin-bottom: 1em;
+	margin-bottom: 2rem;
 }
 
 h1 {
@@ -144,26 +123,28 @@ button {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	font-size: 2em;
+	font-size: 5em;
 }
 
 .bouton-table-des-matieres {
 	position: fixed;
-	top: 100px;
+	top: 10rem;
 	left: 10px;
 }
 
 .bouton-config {
 	position: fixed;
-	top: 100px;
+	top: 10rem;
 	left: 3em;
 }
 
 #commande-clair:hover,
 #commande-fonce:hover,
-#police-scapholene:hover {
-	background-color: #726614;
-	color: #f6eaf4;
+#police-scapholene:hover,
+#police-moins:hover,
+#police-plus:hover {
+	background-color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 }
 
@@ -171,11 +152,19 @@ button {
 #commande-fonce,
 #police-scapholene,
 button {
-	padding: 10px;
+	padding: 5px 10px 5px 10px;
 	border-radius: 1em;
-	background-color: #82aa0a;
+	background-color: #000000;
+	color: #ffffff;
 	font-size: 1.0vw;
 	cursor: pointer;
+}
+
+a:hover {
+	background-color: #000000;
+	border-radius: 1em;
+	color: #ffffff;
+	padding: 5px 10px 5px 10px;
 }
 
 .image-histoire {
@@ -215,6 +204,7 @@ button {
 
 .narrateur h2,
 .legal h2,
+.chanson h2,
 .projet h4,
 .projet h2 {
 	border-bottom: 1px solid #000000;
@@ -224,7 +214,8 @@ button {
 
 .narrateur,
 .projet,
-.legal {
+.legal,
+.chanson {
 	border: 1em solid transparent;
 	border-image: linear-gradient(90deg, #400672, #ddc31a, #726614);
 	border-image-slice: 1;
@@ -234,14 +225,15 @@ button {
 }
 
 .legal {
-	margin-bottom: 100px;
+	margin-bottom: 100vh;
 }
 
 /* Thème clair */
 .theme-clair .principal,
 .theme-clair .projet,
 .theme-clair .narrateur,
-.theme-clair .legal {
+.theme-clair .legal,
+.theme-clair .chanson {
   background-color: #f9f8f2;
   color: #000000;
 }
@@ -254,7 +246,8 @@ button {
 .theme-fonce .principal,
 .theme-fonce .projet,
 .theme-fonce .narrateur,
-.theme-fonce .legal {
+.theme-fonce .legal,
+.theme-fonce .chanson {
   background-color: #000000;
   color: #f9f8f2;
 }
@@ -289,25 +282,6 @@ button {
 	list-style-type: none;
 }
 
-.radio-controls {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: #400672;
-	color: white;
-	padding: 10px;
-	display: flex;
-	gap: 10px;
-	align-items: center;
-	justify-content: center;
-	z-index: 3000;
-}
-
-.radio-controls input[type="range"] {
-	flex: 1;
-}
-
 .droite {
 	text-align: right;
 	font-style: italic;
@@ -320,9 +294,24 @@ button {
 	border-radius: 64em;
 	color: #dcd9f9;
 	padding: 10px;
+	font-size: 1.5vw;
 }
 
 .temps:hover {
 	background-color: #dcd9f9;
 	color: #10085b;
 }
+
+.petit {
+	font-style: italic;
+}
+
+.octave {
+	font-style: italic;
+	text-align: center;
+}
+
+.centre {
+	text-align: center;
+}
+

@@ -231,3 +231,6 @@ a.table-matieres {
 .liste-sans-point {
   list-style-type: none;
 }
+
+img[alt="Hits"] { display: none; }
+

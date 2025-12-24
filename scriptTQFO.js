@@ -96,6 +96,7 @@ const changePolice = function(police) {
 	const menuC = document.querySelector(".menu-config");
 	const TDM = document.querySelector(".table-des-matiere");
 	const chanson = document.querySelector(".chanson");
+	const graduation = document.querySelector(".graduation");
 	
 	principal.style.fontFamily = police + ", TeXGyreSchola, serif";
 	projet.style.fontFamily = police + ", TeXGyreSchola, serif";
@@ -104,6 +105,7 @@ const changePolice = function(police) {
 	menuC.style.fontFamily = police + ", TeXGyreSchola, serif";
 	TDM.style.fontFamily = police + ", TeXGyreSchola, serif";
 	chanson.style.fontFamily = police + ", TeXGyreSchola, serif";
+	graduation.style.fontFamily = police + ", TeXGyreSchola, serif";
 }
 
 let grandeurPolice = null;   // valeur de départ
@@ -241,3 +243,21 @@ function allerA(seconds) {
     player.playVideo();
   }
 }
+
+// Conversion cm → px (approximation selon 96 dpi : 1cm ≈ 37.8px)
+const convertirCmEnPx = cm => cm * 37.8;
+const regle = document.getElementById('regle');
+const pas = convertirCmEnPx(10); // tous les 10 cm
+const hauteurTotale = principal.scrollHeight;
+
+let numero = 1;
+for (let positionY = pas; positionY < hauteurTotale; positionY += pas) {
+    const graduation = document.createElement('div');
+    graduation.className = 'graduation';
+    graduation.style.top = positionY + 'px';
+    graduation.textContent = numero;
+    regle.appendChild(graduation);
+    numero++;
+}
+
+

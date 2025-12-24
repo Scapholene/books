@@ -145,19 +145,22 @@ button {
 #police-plus:hover {
 	background-color: #ffffff;
 	color: #000000;
+	filter: drop-shadow(3px 1px 12px #ff1a1a);
 	font-weight: bold;
+	transition: all 0.3s ease; 
 }
 
 #commande-clair,
 #commande-fonce,
 #police-scapholene,
 button {
-	padding: 5px 10px 5px 10px;
-	border-radius: 1em;
 	background-color: #000000;
+	border-radius: 1em;
 	color: #ffffff;
-	font-size: 1.0vw;
 	cursor: pointer;
+	filter: drop-shadow(3px 1px 7px #BB0B0B);
+	padding: 5px 10px 5px 10px;
+	font-size: 1.0vw;
 }
 
 a:hover {
@@ -183,8 +186,10 @@ a:hover {
 	background-color: #ddc31a;
 	border-radius: 1em;
 	bottom: 0;
-	color: #000000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 1.5);
+  color: #000000;
 	display: none;
+	filter: drop-shadow(3px 1px 7px #BB0B0B);
 	padding: 10px;
 	position: fixed;
 	z-index: 1000;
@@ -316,4 +321,23 @@ a:hover {
 }
 
 img[alt="Hits"] { display: none; }
+
+/* La règle à gauche */
+.regle {
+  border-right: 1px solid #ccc;
+  position: relative;
+  width: 50px;
+}
+
+.graduation {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  border-top: 1px solid #bb0b0b;
+  color: #bb0b0b;
+  left: 0;
+  opacity: 60%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
 

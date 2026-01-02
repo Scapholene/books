@@ -121,11 +121,12 @@ if(window.innerWidth <= 1000 ) {
 }
 
 window.addEventListener("resize", () => {
-  grandeurPolice = window.innerWidth <= 1000 ? 3 : 1.5;
-  appliquerPolice();
+    grandeurPolice = window.innerWidth <= 1000 ? 3 : 1.5;
+    appliquerPolice();
   
-  radioControl.style.height = window.innerWidth <= 1000 ? "9rem" : "3rem";
-  radioControl.style.width = window.innerWidth <= 1000 ? "98%" : "99%";
+    radioControl.style.height = window.innerWidth <= 1000 ? "9rem" : "3rem";
+    radioControl.style.width = window.innerWidth <= 1000 ? "98%" : "99%";
+	laRegle();
 });
 
 const ecart = 0.25;          // incrément/décrément
@@ -166,14 +167,16 @@ function appliquerPolice() {
 
 // bouton moins
 policeMoins.addEventListener("click", () => {
-  grandeurPolice -= ecart;
-  appliquerPolice();
+    grandeurPolice -= ecart;
+    appliquerPolice();
+	laRegle();
 });
 
 // bouton plus
 policePlus.addEventListener("click", () => {
-  grandeurPolice += ecart;
-  appliquerPolice();
+    grandeurPolice += ecart;
+    appliquerPolice();
+	laRegle();
 });
 
 // appliquer au chargement
@@ -183,6 +186,7 @@ const policeScapholene = document.querySelector("#police-scapholene");
 policeScapholene.onclick = function () {
 	const police = "Scapholene";
 	changePolice(police);
+	laRegle();
 }
 
 const fermerConfig = document.querySelector("#fermer-config");
@@ -245,19 +249,36 @@ function allerA(seconds) {
 }
 
 // Conversion cm → px (approximation selon 96 dpi : 1cm ≈ 37.8px)
-const convertirCmEnPx = cm => cm * 37.8;
-const regle = document.getElementById('regle');
-const pas = convertirCmEnPx(10); // tous les 10 cm
-const hauteurTotale = principal.scrollHeight;
+function laRegle () {
+	
+	document.querySelectorAll(".graduation")
+		.forEach(elem => {
+			elem.remove();
+	});
+	
+	const convertirCmEnPx = cm => cm * 37.8;
+	const regle = document.getElementById('regle');
+	const pas = convertirCmEnPx(10); // tous les 10 cm
+	const hauteurTotale = principal.scrollHeight;
 
-let numero = 1;
-for (let positionY = pas; positionY < hauteurTotale; positionY += pas) {
-    const graduation = document.createElement('div');
-    graduation.className = 'graduation';
-    graduation.style.top = positionY + 'px';
-    graduation.textContent = numero;
-    regle.appendChild(graduation);
-    numero++;
+	let numero = 1;
+	for (let positionY = pas; positionY < hauteurTotale; positionY += pas) {
+		const graduation = document.createElement('div');
+		graduation.className = 'graduation';
+		graduation.style.top = positionY + 'px';
+		graduation.textContent = numero + " ";
+
+		const caseACocher = document.createElement('input');
+		caseACocher.className = 'case';
+		caseACocher.style.top = positionY + 'px';
+		caseACocher.type = "checkbox";
+		graduation.appendChild(caseACocher);
+
+		regle.appendChild(graduation);
+		numero++;
+	}
 }
+
+laRegle();
 
 
